@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>GitHub Repo Displayer</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="repo-heading">Github Repo Displayer </h1>
+        <div class="search-container">
+            <label for="username"><h3>GitHub Username:</h3></label>
+            <div class="input-container">
+                <input type="text" id="username" placeholder="Enter GitHub Username">
+                <button onclick="searchRepos()">Search</button>
+            </div>
+        </div>
+        <div id="user-info" class="user-info">
+            <img id="avatar" class="avatar" alt="User Avatar" src="./avatar.png"><p id="k"></p></img>
+            <div id="profile-info" class="profile-info">
+                <h2 id="profile-name"></h2>
+                <p id="profile-description"></p>
+                <a id="profile-link" href="#" target="_blank" class="profile-link-button">GitHub Profile</a>
+                <p id="totalRepos">Total Repositories: 0</p>
+            </div>
+        </div>
+       
+        <div id="repos-container" class="repos-container grid-container"></div>
+        <div id="pagination" class="pagination">
+            <button id="prevBtn" onclick="fetchPrevPage()">Previous</button>
+            <div id="pageButtons" class="page-buttons"></div>
+            <button id="nextBtn" onclick="fetchNextPage()">Next</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
